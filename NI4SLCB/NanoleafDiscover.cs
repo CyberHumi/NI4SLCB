@@ -54,7 +54,6 @@ namespace NI4SLCB {
             timer.Start();
             byte[] ReceiveBuffer = new byte[NanoleafDiscover.bufferSize];
             int ReceivedBytes = 0;
-            int i = 1;
             while (timer.Elapsed.TotalSeconds < NanoleafDiscover.timeout) {
                 if (UdpSocket.Available > 0) {
                     ReceivedBytes = UdpSocket.Receive(ReceiveBuffer, SocketFlags.None);

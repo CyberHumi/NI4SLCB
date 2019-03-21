@@ -219,9 +219,9 @@ namespace NI4SLCB {
             textBox212_apikey.Text = apiKey;
         }
 
-        private void Button221_authtokengenerate_Click(object sender, EventArgs e) { 
+        private void Button221_authtokengenerate_Click(object sender, EventArgs e) {
             string token = Nanoleaf.GenerateToken(textBox221_location.Text);
-            if (token != null) 
+            if (token != null)
                 textBox221_authtoken.Text = token;
             if (textBox221_location.Text.Length > 0 && textBox221_authtoken.Text.Length > 0 && !textBox221_authtoken.Text.StartsWith("---")) {
                 devices[0] = new NanoleafDevice(textBox221_location.Text, textBox221_authtoken.Text);
@@ -231,7 +231,7 @@ namespace NI4SLCB {
 
         private void Button222_authtokengenerate_Click(object sender, EventArgs e) {
             string token = Nanoleaf.GenerateToken(textBox222_location.Text);
-            if (token != null) 
+            if (token != null)
                 textBox221_authtoken.Text = token;
             if (textBox222_location.Text.Length > 0 && textBox222_authtoken.Text.Length > 0 && !textBox222_authtoken.Text.StartsWith("---")) {
                 devices[1] = new NanoleafDevice(textBox222_location.Text, textBox222_authtoken.Text);
@@ -241,7 +241,7 @@ namespace NI4SLCB {
 
         private void Button223_authtokengenerate_Click(object sender, EventArgs e) {
             string token = Nanoleaf.GenerateToken(textBox223_location.Text);
-            if (token != null) 
+            if (token != null)
                 textBox221_authtoken.Text = token;
             if (textBox223_location.Text.Length > 0 && textBox223_authtoken.Text.Length > 0 && !textBox223_authtoken.Text.StartsWith("---")) {
                 devices[2] = new NanoleafDevice(textBox223_location.Text, textBox223_authtoken.Text);
@@ -251,7 +251,7 @@ namespace NI4SLCB {
 
         private void Button224_authtokengenerate_Click(object sender, EventArgs e) {
             string token = Nanoleaf.GenerateToken(textBox224_location.Text);
-            if (token != null) 
+            if (token != null)
                 textBox221_authtoken.Text = token;
             if (textBox224_location.Text.Length > 0 && textBox224_authtoken.Text.Length > 0 && !textBox224_authtoken.Text.StartsWith("---")) {
                 devices[3] = new NanoleafDevice(textBox224_location.Text, textBox224_authtoken.Text);
@@ -722,19 +722,19 @@ namespace NI4SLCB {
 
             ComboBox[] effects = { comboBox231_default, comboBox232_follow, comboBox233_sub, comboBox234_donation, comboBox235_cheer, comboBox236_host, comboBox237_raid, comboBox241_effect, comboBox242_effect, comboBox243_effect, comboBox244_effect, comboBox245_effect, comboBox246_effect, comboBox247_effect, comboBox248_effect, comboBox249_effect, comboBox2410_effect };
             for (int i = 0; i < effects.Length; i++) {
-                if ((i < 7 && alerts[i] == null) || (i >= 7 && chatCmds[i - 6] == null))
-                    continue;
-                if (i == 0)
-                    effects[i].Items.Add(EffectChange.CurrentEffect);
-                else
-                    effects[i].Items.Add("");
+                if (effects[i].Items.Count == 0) {
+                    if (i == 0)
+                        effects[i].Items.Add(EffectChange.CurrentEffect);
+                    else
+                        effects[i].Items.Add("");
+                }
                 foreach (string en in els) {
                     effects[i].Items.Add(en);
                 }
-                if (i < 7) {
+                if (i < 7 && alerts[i] != null) {
                     effects[i].SelectedIndex = effects[i].FindStringExact(alerts[i].GetEffectName());
                     effects[i].SelectedText = alerts[i].GetEffectName();
-                } else {
+                } else if (i >= 7 && chatCmds[i - 6] != null) {
                     effects[i].SelectedIndex = effects[i].FindStringExact(chatCmds[i - 6].GetEffectName());
                     effects[i].SelectedText = chatCmds[i - 6].GetEffectName();
                 }
