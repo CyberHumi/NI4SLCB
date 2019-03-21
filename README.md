@@ -1,4 +1,4 @@
-# NI4SLCB: Websocket client
+# Nanoleaf Integration for SLCB: Websocket client
 This Windows application is required for the [Nanoleaf Integration 4 SLCB](https://github.com/CyberHumi/Chatbot-Scripts) script.
 
 
