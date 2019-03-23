@@ -12,6 +12,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Nanoleaf Integration for SLCB: Websocket client
+ * Author:  CyberHumi
+ *          https://github.com/CyberHumi/
+ * Licence: MIT
+ */
+
 namespace NI4SLCB {
     public partial class MainForm : Form {
         private SLCB conn;
@@ -539,44 +546,44 @@ namespace NI4SLCB {
         }
 
         private void CheckBox231_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown231_default_brightness.Enabled = (checkBox231_default_brightness.Checked ? true : false);
+            numericUpDown231_default_brightness.Enabled = checkBox231_default_brightness.Checked;
         }
         private void CheckBox232_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown232_follow_brightness.Enabled = (checkBox232_follow_brightness.Checked ? true : false);
+            numericUpDown232_follow_brightness.Enabled = checkBox232_follow_brightness.Checked;
         }
         private void CheckBox233_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown233_sub_brightness.Enabled = (checkBox233_sub_brightness.Checked ? true : false);
+            numericUpDown233_sub_brightness.Enabled = checkBox233_sub_brightness.Checked;
         }
         private void CheckBox234_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown234_donation_brightness.Enabled = (checkBox234_donation_brightness.Checked ? true : false);
+            numericUpDown234_donation_brightness.Enabled = checkBox234_donation_brightness.Checked;
         }
         private void CheckBox235_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown235_cheer_brightness.Enabled = (checkBox235_cheer_brightness.Checked ? true : false);
+            numericUpDown235_cheer_brightness.Enabled = checkBox235_cheer_brightness.Checked;
         }
         private void CheckBox236_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown236_host_brightness.Enabled = (checkBox236_host_brightness.Checked ? true : false);
+            numericUpDown236_host_brightness.Enabled = checkBox236_host_brightness.Checked;
         }
         private void CheckBox237_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown237_raid_brightness.Enabled = (checkBox237_raid_brightness.Checked ? true : false);
+            numericUpDown237_raid_brightness.Enabled = checkBox237_raid_brightness.Checked;
         }
 
         private void CheckBox232_duration_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown232_follow_duration.Enabled = (checkBox232_follow_duration.Checked ? true : false);
+            numericUpDown232_follow_duration.Enabled = checkBox232_follow_duration.Checked;
         }
         private void CheckBox233_duration_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown233_sub_duration.Enabled = (checkBox233_sub_duration.Checked ? true : false);
+            numericUpDown233_sub_duration.Enabled = checkBox233_sub_duration.Checked;
         }
         private void CheckBox234_duration_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown234_donation_duration.Enabled = (checkBox234_donation_duration.Checked ? true : false);
+            numericUpDown234_donation_duration.Enabled = checkBox234_donation_duration.Checked;
         }
         private void CheckBox235_duration_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown235_cheer_duration.Enabled = (checkBox235_cheer_duration.Checked ? true : false);
+            numericUpDown235_cheer_duration.Enabled = checkBox235_cheer_duration.Checked;
         }
         private void CheckBox236_duration_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown236_host_duration.Enabled = (checkBox236_host_duration.Checked ? true : false);
+            numericUpDown236_host_duration.Enabled = checkBox236_host_duration.Checked;
         }
         private void CheckBox237_duration_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown237_raid_duration.Enabled = (checkBox237_raid_duration.Checked ? true : false);
+            numericUpDown237_raid_duration.Enabled = checkBox237_raid_duration.Checked;
         }
 
         private void AddCheckedChanged2() {
@@ -606,71 +613,71 @@ namespace NI4SLCB {
         }
 
         private void CheckBox240_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown240_mstr_brightness.Enabled = (checkBox240_mstr_brightness.Checked ? true : false);
+            numericUpDown240_mstr_brightness.Enabled = checkBox240_mstr_brightness.Checked;
         }
         private void CheckBox241_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown241_cmd1_brightness.Enabled = (checkBox241_cmd1_brightness.Checked ? true : false);
+            numericUpDown241_cmd1_brightness.Enabled = checkBox241_cmd1_brightness.Checked;
         }
         private void CheckBox242_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown242_cmd2_brightness.Enabled = (checkBox242_cmd2_brightness.Checked ? true : false);
+            numericUpDown242_cmd2_brightness.Enabled = checkBox242_cmd2_brightness.Checked;
         }
         private void CheckBox243_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown243_cmd3_brightness.Enabled = (checkBox243_cmd3_brightness.Checked ? true : false);
+            numericUpDown243_cmd3_brightness.Enabled = checkBox243_cmd3_brightness.Checked;
         }
         private void CheckBox244_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown244_cmd4_brightness.Enabled = (checkBox244_cmd4_brightness.Checked ? true : false);
+            numericUpDown244_cmd4_brightness.Enabled = checkBox244_cmd4_brightness.Checked;
         }
         private void CheckBox245_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown245_cmd5_brightness.Enabled = (checkBox245_cmd5_brightness.Checked ? true : false);
+            numericUpDown245_cmd5_brightness.Enabled = checkBox245_cmd5_brightness.Checked;
         }
         private void CheckBox246_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown246_cmd6_brightness.Enabled = (checkBox246_cmd6_brightness.Checked ? true : false);
+            numericUpDown246_cmd6_brightness.Enabled = checkBox246_cmd6_brightness.Checked;
         }
         private void CheckBox247_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown247_cmd7_brightness.Enabled = (checkBox247_cmd7_brightness.Checked ? true : false);
+            numericUpDown247_cmd7_brightness.Enabled = checkBox247_cmd7_brightness.Checked;
         }
         private void CheckBox248_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown248_cmd8_brightness.Enabled = (checkBox248_cmd8_brightness.Checked ? true : false);
+            numericUpDown248_cmd8_brightness.Enabled = checkBox248_cmd8_brightness.Checked;
         }
         private void CheckBox249_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown249_cmd9_brightness.Enabled = (checkBox249_cmd9_brightness.Checked ? true : false);
+            numericUpDown249_cmd9_brightness.Enabled = checkBox249_cmd9_brightness.Checked;
         }
         private void CheckBox2410_brightness_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown2410_cmd10_brightness.Enabled = (checkBox2410_cmd10_brightness.Checked ? true : false);
+            numericUpDown2410_cmd10_brightness.Enabled = checkBox2410_cmd10_brightness.Checked;
         }
 
         private void CheckBox240_mstr_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown240_mstr_duration.Enabled = (checkBox240_mstr_duration.Checked ? true : false);
+            numericUpDown240_mstr_duration.Enabled = checkBox240_mstr_duration.Checked;
         }
         private void CheckBox241_cmd1_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown241_cmd1_duration.Enabled = (checkBox241_cmd1_duration.Checked ? true : false);
+            numericUpDown241_cmd1_duration.Enabled = checkBox241_cmd1_duration.Checked;
         }
         private void CheckBox242_cmd2_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown242_cmd2_duration.Enabled = (checkBox242_cmd2_duration.Checked ? true : false);
+            numericUpDown242_cmd2_duration.Enabled = checkBox242_cmd2_duration.Checked;
         }
         private void CheckBox243_cmd3_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown243_cmd3_duration.Enabled = (checkBox243_cmd3_duration.Checked ? true : false);
+            numericUpDown243_cmd3_duration.Enabled = checkBox243_cmd3_duration.Checked;
         }
         private void CheckBox244_cmd4_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown244_cmd4_duration.Enabled = (checkBox244_cmd4_duration.Checked ? true : false);
+            numericUpDown244_cmd4_duration.Enabled = checkBox244_cmd4_duration.Checked;
         }
         private void CheckBox245_cmd5_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown245_cmd5_duration.Enabled = (checkBox245_cmd5_duration.Checked ? true : false);
+            numericUpDown245_cmd5_duration.Enabled = checkBox245_cmd5_duration.Checked;
         }
         private void CheckBox246_cmd6_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown246_cmd6_duration.Enabled = (checkBox246_cmd6_duration.Checked ? true : false);
+            numericUpDown246_cmd6_duration.Enabled = checkBox246_cmd6_duration.Checked;
         }
         private void CheckBox247_cmd7_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown247_cmd7_duration.Enabled = (checkBox247_cmd7_duration.Checked ? true : false);
+            numericUpDown247_cmd7_duration.Enabled = checkBox247_cmd7_duration.Checked;
         }
         private void CheckBox248_cmd8_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown248_cmd8_duration.Enabled = (checkBox248_cmd8_duration.Checked ? true : false);
+            numericUpDown248_cmd8_duration.Enabled = checkBox248_cmd8_duration.Checked;
         }
         private void CheckBox249_cmd9_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown249_cmd9_duration.Enabled = (checkBox249_cmd9_duration.Checked ? true : false);
+            numericUpDown249_cmd9_duration.Enabled = checkBox249_cmd9_duration.Checked;
         }
         private void CheckBox2410_cmd10_CheckedChanged(Object sender, EventArgs e) {
-            numericUpDown2410_cmd10_duration.Enabled = (checkBox2410_cmd10_duration.Checked ? true : false);
+            numericUpDown2410_cmd10_duration.Enabled = checkBox2410_cmd10_duration.Checked;
         }
 
         private void Button221_search_Click(object sender, EventArgs e) {
