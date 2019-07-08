@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.IO;
@@ -14,17 +14,19 @@ namespace NI4SLCB {
         public static string GenerateToken(string location) {
             string link = location + "/api/v1/new";
 
-            WebRequest request = null;
-            WebResponse response = null;
+            HttpWebRequest request = null;
+            HttpWebResponse response = null;
             try {
-                request = WebRequest.Create(link);
+                request = (HttpWebRequest)WebRequest.Create(link);
                 request.Method = "POST";
+                //ADD Expect100Continue attribute for nanoleaf firmware 3.1.2+, 100-continue HTTP header ends in a timeout
+                request.ServicePoint.Expect100Continue = false;
             } catch (Exception e) {
                 MainForm.ShowAlert(e.Message, "Error");
                 return null;
             }
             try {
-                response = request.GetResponse();
+                response = (HttpWebResponse)request.GetResponse();
             } catch (Exception e) {
                 MainForm.ShowAlert(e.Message + "\n\n" + link + "\n\nPress and hold the power button for 5-7 seconds first!\n(Light will begin flashing)", "Error 403");
                 return null;
@@ -45,17 +47,19 @@ namespace NI4SLCB {
 
         private static string NanoleafRequest(string link) {
             const string method = "GET";
-            WebRequest request = null;
-            WebResponse response = null;
+            HttpWebRequest request = null;
+            HttpWebResponse response = null;
             try {
-                request = WebRequest.Create(link);
+                request = (HttpWebRequest)WebRequest.Create(link);
                 request.Method = method;
+                //ADD Expect100Continue attribute for nanoleaf firmware 3.1.2+, 100-continue HTTP header ends in a timeout
+                request.ServicePoint.Expect100Continue = false;
             } catch (Exception e) {
                 MainForm.ShowAlert(e.Message, "Error");
                 return null;
             }
             try {
-                response = request.GetResponse();
+                response = (HttpWebResponse)request.GetResponse();
             } catch (Exception e) {
                 MainForm.ShowAlert(e.Message, "Request Error");
                 return null;
@@ -67,13 +71,15 @@ namespace NI4SLCB {
         }
 
         private static Boolean NanoleafRequest(string method, string link, string requestData) {
-            WebRequest request = null;
-            WebResponse response = null;
+            HttpWebRequest request = null;
+            HttpWebResponse response = null;
             try {
                 /* see https://docs.microsoft.com/de-de/dotnet/framework/network-programming/how-to-send-data-using-the-webrequest-class */
                 byte[] byteArray = Encoding.UTF8.GetBytes(requestData);
-                request = WebRequest.Create(link);
+                request = (HttpWebRequest)WebRequest.Create(link);
                 request.Method = method;
+                //ADD Expect100Continue attribute for nanoleaf firmware 3.1.2+, 100-continue HTTP header ends in a timeout
+                request.ServicePoint.Expect100Continue = false;
                 request.ContentLength = byteArray.Length;
                 Stream dataStream = request.GetRequestStream();
                 dataStream.Write(byteArray, 0, byteArray.Length);
@@ -83,7 +89,7 @@ namespace NI4SLCB {
                 return false;
             }
             try {
-                response = request.GetResponse();
+                response = (HttpWebResponse)request.GetResponse();
             } catch (Exception e) {
                 MainForm.ShowAlert("Link:\r\n" + link + "\r\n\r\nData:\r\n" + requestData  + "\r\n\r\n" + e.Message, "Request Error");
                 return false;
