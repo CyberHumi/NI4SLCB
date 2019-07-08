@@ -2,7 +2,7 @@
 This Windows application is required for the [Nanoleaf Integration for SLCB](https://github.com/CyberHumi/Chatbot-Scripts) script.
 
 
-Donwload*: [NI4SLCB_v1.0.1.zip](https://github.com/CyberHumi/NI4SLCB/releases/download/v1.0.1/NI4SLCB_v1.0.1.zip) \
+Donwload*: [NI4SLCB_v1.1.zip](https://github.com/CyberHumi/NI4SLCB/releases/download/v1.1/NI4SLCB_v1.1.zip) \
 Video: [Nanoleaf Integration for SLCB: Installation and configuration](http://www.youtube.com/watch?v=lJSqoR8h5vU) (YouTube)
 
 \* Download includes [Nanoleaf Integration for SLCB](https://github.com/CyberHumi/Chatbot-Scripts) and [Nanoleaf Integration for SLCB: Websocket client](https://github.com/CyberHumi/NI4SLCB)
