@@ -4704,7 +4704,7 @@
             this.Controls.Add(toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Nanoleaf Integration for SLCB: WebSocket client v1.0.1";
+            this.Text = "Nanoleaf Integration for SLCB: WebSocket client v1.1";
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             this.statusStrip.ResumeLayout(false);
